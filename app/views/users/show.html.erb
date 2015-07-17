@@ -1,0 +1,31 @@
+
+
+<h1>USER PROFILE</h1>
+
+
+<h3>Name: <%= @user.name %></h3>
+<h3>Email: <%= @user.email %></h3>
+
+<div>
+  <h3>Upcoming Trips:</h3>
+
+
+<div>
+<% @user.trips.each do |trip| %>
+    <div class="trip">
+      	<%= image_tag trip.image %>
+      	<h4><%= trip.name %></h4>
+      	<p><%= trip.dest %></p>
+      	<p><%= trip.month %></p>
+		<p><%= trip.desc %></p>
+		<p><%= trip.all_tags %></p>
+		<p>
+      	<%= link_to "#{trip.name}", trip_path(trip) %>
+      	<%= button_to "Depart", remove_trip_path(@user, trip), :method => :delete %>
+    	</p>
+    </div>
+</div>
+    
+    <% end %>
+      
+</div>

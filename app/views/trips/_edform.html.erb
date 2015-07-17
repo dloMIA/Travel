@@ -1,0 +1,52 @@
+
+<%= form_for @trip do |t| %>
+ 
+  <% if @trip.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@trip.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @trip.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+ <p>
+    <%= t.label :name %><br>
+    <%= t.text_field :name %>
+  </p>
+  
+  <p>
+    <%= t.label :dest %><br>
+    <%= t.text_field :dest %>
+  </p>
+  
+  <p>
+    <%= t.label :month %><br>
+    <%= t.text_field :month %>
+  </p>
+  
+  <p>
+    <%= t.label :desc %><br>
+    <%= t.text_field :desc %>
+  </p>
+  
+   <p>
+    <%= t.label :image %><br>
+    <%= t.text_field :image %>
+  </p>
+  
+   <p>
+  	<%= t.label "Tags" %><br>
+  	<%= t.text_field :all_tags, placeholder: "Tags separated with comma" %>
+  </p>
+  
+  <p>
+    <%= t.submit "Update!!", class: "btn-srch" %>
+  </p>
+ 
+<% end %>

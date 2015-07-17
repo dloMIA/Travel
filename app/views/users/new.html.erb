@@ -1,0 +1,44 @@
+
+<h1>Sign Up</h1>
+
+<div class="row">
+<div class="col-md-4 col-md-offset-3">
+<%= render 'form' %>
+
+<p>Already a user? <%= link_to 'Login', '#' %>
+</div>
+
+
+<br>
+<%= check_box_tag(:plan) %>
+<%= label_tag(:plan, "Prefer a schedule") %>
+<%= check_box_tag(:discover) %>
+<%= label_tag(:discover, "Carpe Diem") %>
+<br></br>
+<%= check_box_tag(:smoker) %>
+<%= label_tag(:smoker, "I smoke") %>
+<%= check_box_tag(:no_smoke) %>
+<%= label_tag(:no_smoke, "No smoking!") %>
+<br></br>
+<%= check_box_tag(:drink_no) %>
+<%= label_tag(:drink_no, "No drinking") %>
+<%= check_box_tag(:drink_light) %>
+<%= label_tag(:drink_light, "Light Drinker") %>
+<%= check_box_tag(:drink_heavy) %>
+<%= label_tag(:drink_heavy, "Heavy Drinker") %>
+<br></br>
+<%= check_box_tag(:early_bird) %>
+<%= label_tag(:early_bird, "Early Bird") %>
+<%= check_box_tag(:night_owl) %>
+<%= label_tag(:night_owl, "Night Owl") %>
+<br></br>
+<%= check_box_tag(:coed) %>
+<%= label_tag(:coed, "Only Coed") %>
+<%= check_box_tag(:rainbow) %>
+<%= label_tag(:rainbow, "LGTV") %>
+<br></br>
+<%= check_box_tag(:drive) %>
+<%= label_tag(:drive, "I drive") %>
+
+
+</div>

@@ -1,0 +1,7 @@
+[WARNING] The model name 'AddAdminToTrips' was recognized as a plural, using the singular 'AddAdminToTrip' instead. Override with --force-plural or setup custom inflection rules for this noun before running the generator.
+      invoke  active_record
+      create    db/migrate/20150701145304_create_add_admin_to_trips.rb
+      create    app/models/add_admin_to_trip.rb
+      invoke    test_unit
+      create      test/models/add_admin_to_trip_test.rb
+      create      test/fixtures/add_admin_to_trips.yml

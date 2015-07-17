@@ -1,0 +1,31 @@
+<div class="hero">
+  <div class="container">
+    <h1>Sharing Adventures</h1>
+    <p>Create a trip.  Bring your friends along.  Or tag along.</p>
+    <p>Where are you going?</p>
+<%= form_tag filters_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", class: "btn-srch" 	%>
+  </p>
+<% end %>
+  </div>
+  
+</div>
+
+  <div class="container">
+  <h2>Browse available trips.</h2>
+    <% @trips.each do |trip| %>
+    <div class="trip">
+      	<%= image_tag trip.image %>
+      	<h4><%= trip.name %></h4>
+      	<p><%= trip.dest %></p>
+      	<p><%= trip.month %></p>
+		<p><%= trip.desc %></p>
+      	<%= link_to "Details", trip_path(trip) %>
+    </div>
+    
+    <% end %>
+  </div>
+  
+</div>

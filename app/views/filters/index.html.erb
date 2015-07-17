@@ -1,0 +1,17 @@
+
+<h1>Filtered list of Trips</h1>
+
+
+
+  <div class="container">
+<% @trips.each do |trip| %>
+     <div class="trip">
+      	<%= image_tag trip.image %>
+      	<h4><%= trip.name %></h4>
+      	<p><%= trip.dest %></p>
+      	<p><%= trip.month %></p>
+		<p><%= trip.desc %></p>
+      	<%= link_to "Details", trip_path(trip) %>
+    </div>
+  <% end %>
+</div>

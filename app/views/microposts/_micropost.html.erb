@@ -1,0 +1,7 @@
+<li id="micropost-<%= micropost.id %>">
+  <span class="content"><%= micropost.content %></span>
+  <p><%= @users.find(micropost.poster).name %>
+  |
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+  </p>
+</li>

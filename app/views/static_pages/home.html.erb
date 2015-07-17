@@ -1,0 +1,24 @@
+<div class="center jumbotron">
+<p>Home Page</p>
+    	
+<h1>We are going to Travel</h1>   	 	
+<br></br> 
+<p>Where are you going?</p>
+<%= form_tag filters_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", class: "btn-srch" 	%>
+  </p>
+<% end %>
+
+
+<br></br>
+
+<%= link_to 'Sign up now!', new_user_path%>
+<br></br>
+
+</div> 
+
+
+
+  

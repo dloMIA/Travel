@@ -1,0 +1,2 @@
+class TlinksController < ApplicationController
+end
